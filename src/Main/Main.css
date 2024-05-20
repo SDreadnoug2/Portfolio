@@ -1,0 +1,46 @@
+.main {
+  width: 100vw;
+  min-height: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 100px;
+  position: relative;
+  transition: transform 0.1s ease-out;
+}
+.main__selectors {
+  position: absolute;
+  left: 90px;
+  align-self: center;
+  text-align: right;
+}
+.main__title {
+  font-size: 120px;
+  margin: 0;
+  transition: 0.2s;
+  transition: transform 0.2s ease-out forwards;
+}
+
+.main__title-selected {
+  transform: translateX(50px);
+}
+
+.main__title:hover {
+  transform: rotateY(15deg);
+  transform: translateX(50px);
+  animation: flash 0.2s ease-out forwards;
+  cursor: pointer;
+}
+
+@keyframes flash {
+  0% {
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: yellow;
+  }
+}
